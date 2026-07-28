@@ -3064,13 +3064,12 @@ html.is-embedded .mobile-apply {
             <li>Ежедневно работать в CRM и Altegio, аккуратно вести базу и отчётность.</li>
             <li>Подтверждать визиты, закрывать освободившиеся окна, вести лист ожидания и исходящий обзвон.</li>
             <li>Собирать обратную связь, мотивировать клиентов на повторные визиты и продление курса.</li>
-            <li>Отрабатывать отзывы, анонсировать свободные места и публиковать готовый контент.</li>
           </ul>
         </article>
         <article class="role-panel role-panel-soft">
           <h2>Что важно для нас</h2>
           <ul class="role-list">
-            <li>Опыт в продажах от одного года; опыт в сфере услуг будет преимуществом.</li>
+            <li>Опыт в продажах от одного года; опыт продаж в бьюти-сфере будет преимуществом.</li>
             <li>Наличие компьютера и стабильного интернета для удалённой работы.</li>
             <li>Грамотная речь и уверенное владение русским и узбекским языками.</li>
             <li>Умение держать высокий темп, быстро отвечать и сохранять качество общения.</li>
@@ -3186,6 +3185,13 @@ html.is-embedded .mobile-apply {
               <option>Более 3 лет</option>
             </select>
           </label>
+          <fieldset class="field field-full">
+            <legend>Есть ли у вас опыт продаж в бьюти-сфере? *</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="beauty_sales_experience" value="Да" required><span>Да, есть</span></label>
+              <label class="choice"><input type="radio" name="beauty_sales_experience" value="Нет"><span>Нет</span></label>
+            </div>
+          </fieldset>
           <label class="field">
             <span>Укажите ваш возраст *</span>
             <input type="number" name="age" inputmode="numeric" required min="1" max="99" placeholder="Полных лет">
@@ -3386,6 +3392,7 @@ if (candidateForm) {
       `Telegram: ${get("telegram") || "Не указан"}`,
       `Возраст: ${get("age")}`,
       `Опыт в продажах: ${get("experience")}`,
+      `Опыт продаж в бьюти-сфере: ${get("beauty_sales_experience")}`,
       `Компьютер для работы: ${get("computer")}`,
       `Опыт с CRM: ${get("crm_experience")}`,
       `Русский язык: ${get("russian_level")}`,
